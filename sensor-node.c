@@ -36,7 +36,7 @@ PROCESS_THREAD(sensor_node, ev, data)
             LOG_INFO("Sending request %u to", counter);
             LOG_INFO("\n");
 
-            snprintf(buffer, sizeof(buffer), "Packet No. %d", counter++);
+            snprintf(buffer, sizeof(buffer), "Packet No. %d", 1);
             simple_udp_sendto(&connection, buffer, strlen(buffer), &server_address); 
         } else {
             LOG_INFO("Root not reachable yet.\n");
